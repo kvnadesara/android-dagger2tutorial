@@ -13,7 +13,7 @@ import java.io.File
  * @author kevin.adesara on 03/01/18.
  */
 
-@Module(includes = arrayOf(ContextModule::class))
+@Module(includes = [ContextModule::class])
 class NetworkModule {
 
     @Provides

@@ -9,7 +9,7 @@ import dagger.Component
  */
 
 @AppScope
-@Component(modules = arrayOf(GithubServiceModule::class, PicassoModule::class))
+@Component(modules = [GithubServiceModule::class, PicassoModule::class])
 interface AppComponent {
     fun getGithubService(): GithubService
 

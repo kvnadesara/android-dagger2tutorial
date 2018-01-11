@@ -9,7 +9,7 @@ import dagger.Component
  */
 
 @MainScope
-@Component(dependencies = arrayOf(AppComponent::class))
+@Component(dependencies = [AppComponent::class])
 interface MainComponent {
     fun inject(activity: MainActivity)
 }

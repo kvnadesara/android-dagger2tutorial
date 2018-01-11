@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  * @author kevin.adesara on 03/01/18.
  */
 
-@Module(includes = arrayOf(NetworkModule::class))
+@Module(includes = [NetworkModule::class])
 class GithubServiceModule {
 
     @Provides
