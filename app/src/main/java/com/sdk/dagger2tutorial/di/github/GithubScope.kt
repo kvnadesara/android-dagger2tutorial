@@ -1,4 +1,4 @@
-package com.sdk.dagger2tutorial.di.main
+package com.sdk.dagger2tutorial.di.github
 
 import javax.inject.Scope
 
@@ -8,4 +8,4 @@ import javax.inject.Scope
 
 @Scope
 @Retention(AnnotationRetention.RUNTIME)
-annotation class MainScope
+annotation class GithubScope
