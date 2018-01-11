@@ -1,5 +1,6 @@
 package com.sdk.dagger2tutorial.ui.adapter
 
+import android.annotation.SuppressLint
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -38,11 +39,12 @@ class RepoAdapter @Inject constructor(val picasso: Picasso) : RecyclerView.Adapt
         private var view: View = itemView
         private var repo: Repo? = null
 
+        @SuppressLint("SetTextI18n")
         fun bind(repo: Repo, picasso: Picasso) {
             this.repo = repo
             view.lblRepoName.text = this.repo?.name
-            view.lblCreatedAt.text = this.repo?.createdAt.toString()
-            view.lblUpdatedAt.text = this.repo?.updatedAt.toString()
+            view.lblCreatedAt.text = "Created At: ${this.repo?.createdAt.toString()}"
+            view.lblUpdatedAt.text = "Updated At: ${this.repo?.updatedAt.toString()}"
             view.lblHtmlUrl.text = this.repo?.htmlUrl
             picasso.load(this.repo?.owner?.avatarUrl).into(view.imgAvatar)
         }
