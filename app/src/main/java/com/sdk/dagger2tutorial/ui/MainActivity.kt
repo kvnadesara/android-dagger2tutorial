@@ -8,11 +8,15 @@ import com.sdk.dagger2tutorial.R
 import com.sdk.dagger2tutorial.ui.adapter.OnRecyclerViewItemClickListener
 import com.sdk.dagger2tutorial.ui.adapter.SamplesAdapter
 import com.sdk.dagger2tutorial.ui.github.GithubActivity
+import com.sdk.dagger2tutorial.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val samplesMap = linkedMapOf("GitHub" to GithubActivity::class.java)
+    private val samplesMap = linkedMapOf(
+            "GitHub" to GithubActivity::class.java,
+            "Login" to LoginActivity::class.java
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
